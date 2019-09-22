@@ -13,13 +13,28 @@ h1{
     text-align: center
 }
 
+h2{
+    height: 10px;
+}
+
 span{
     font-family: 'Electrolize', sans-serif;
     color:white;
 
 }
 
+.center{
+    margin: 0 auto;
+    width: 20%;
+}
+
+.selector-div{
+    text-align: left;
+    
+
+}
 input[type = "checkbox"]{
+    
     position: relative;
     width: 80px;
     height:40px;
@@ -29,6 +44,7 @@ input[type = "checkbox"]{
     border-radius: 20px;
     box-shadow: inset 0 0 5px rgba(0,0,0,.2);
     transition: .5s;
+
 }
 
 input:checked[type = "checkbox"]{

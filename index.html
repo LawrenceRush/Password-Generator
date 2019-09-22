@@ -11,22 +11,34 @@
 <body>
     <h1>Password Generator</h1>
     <h2 id = "new-password"></h2>
-    <input  type="number" id = "password-length" placeholder = "Enter Length"><br>
-    
+
+    <div class = "center">
+    <div class="selector-div">
+    <input  type="number" id = "password-length" placeholder = "Enter Length">
+    </div>
+    <div class="selector-div">
     <input type="checkbox" id="selector-s-char" class="selector">
     <span class="slider round"></span>
     <span>Special Characters</span>
-    <br>
+    </div>
+    
+    <div class="selector-div">
     <input type="checkbox" id="selector-num" class="selector">
     <span>Numbers</span>
-    <br>
+    </div>
+    
+    <div class="selector-div">
     <input type="checkbox" id="selector-low-char" class="selector">
     <span>Lowercase letters</span>
-    <br>
+    </div>
+    
+    <div class="selector-div">
     <input type="checkbox" id="selector-up-char" class="selector">
     <span>Uppercase letters</span>
-    <br>
+    </div>
+    
     <button onclick="generatePassword()">Click me</button>
+    </div>
     
     <script src="app.js"></script>
 </body>
