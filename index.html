@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <input id = "password-length" placeholder = "Enter Length"type="text"><br>
+    
+    <input type="checkbox" id="selector-s-char" class="selector">
+    <span class="slider round"></span>
+    <span>Special Characters</span>
+    <br>
+    <input type="checkbox" id="selector-num" class="selector">
+    <span>Numbers</span>
+    <br>
+    <input type="checkbox" id="selector-low-char" class="selector">
+    <span>Lowercase letters</span>
+    <br>
+    <input type="checkbox" id="selector-up-char" class="selector">
+    <span>Uppercase letters</span>
+    <br>
+    <button onclick="generatePassword()">Click me</button>
+
+    <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+    </label>
+    
+    <script src="app.js"></script>
+</body>
+</html>
+    
+
