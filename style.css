@@ -4,10 +4,17 @@ body{
     background-size: cover;
     background-position: center center;
     background-attachment: fixed;
+    font-family: 'Electrolize', sans-serif;
+    color:white;
      
 }
 
+#new-password{
+text-align: center;
+
+}
 h1{
+    margin-top: 80px;
     font-family: 'Orbitron', sans-serif;
     color: white;
     text-align: center
@@ -18,8 +25,9 @@ h2{
 }
 
 span{
-    font-family: 'Electrolize', sans-serif;
-    color:white;
+  margin-left:10px ;
+  font-size: 1.2em; 
+    
 
 }
 
@@ -30,14 +38,18 @@ span{
 
 .selector-div{
     text-align: left;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    
     
 
 }
 input[type = "checkbox"]{
     
     position: relative;
-    width: 80px;
-    height:40px;
+    width: 60px;
+    height:30px;
     -webkit-appearance: none;
     outline: none; 
     background: #c6c6c6;
@@ -55,8 +67,8 @@ input[type = "checkbox"]:before{
 
     content: "";
     position: absolute;
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
     border-radius: 20px;
     top: 0;
     left: 0;
@@ -87,6 +99,58 @@ input:checked[type = "checkbox"]:before{
   min-width: 50%;
   min-height: 50%;
 }
+
+#number-selector{
+    padding-left:4px;
+}
+#password-length{
+    
+    width:24%;
+    border:2px solid #aaa;
+    border-radius:4px;
+    margin:8px 0;
+    outline:none;
+    padding:8px;
+    box-sizing:border-box;
+    transition:.3s;
+}
+
+input[type=number]:focus{
+    border-color:dodgerBlue !important;
+    box-shadow:0 0 8px 0 dodgerBlue;
+  }
+
+  button {     
+    margin-top: 20px;
+    width: 85%;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: 2px solid white;
+    cursor:pointer;
+    overflow: hidden;  
+    color: white; 
+    font-family: 'Orbitron', sans-serif;     
+}
+
+button:hover {
+    background-color:rgba(231, 231, 231, 0.2);
+    
+}
+
+button:active {
+ 
+  transform: translateY(4px);
+}
+
+
+
+@keyframes fadeIn{
+    0%{opacity:0}
+    50%{opacity:.5}
+    100%{opacity:1}
+}
+
+
 
 
 

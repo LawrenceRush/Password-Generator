@@ -13,12 +13,12 @@
     <h2 id = "new-password"></h2>
 
     <div class = "center">
-    <div class="selector-div">
-    <input  type="number" id = "password-length" placeholder = "Enter Length">
+    <div class="selector-div" id = "number-selector">
+    <input  type="number" id = "password-length" placeholder = "#">
+    <span>Length</span>
     </div>
     <div class="selector-div">
     <input type="checkbox" id="selector-s-char" class="selector">
-    <span class="slider round"></span>
     <span>Special Characters</span>
     </div>
     
@@ -36,8 +36,10 @@
     <input type="checkbox" id="selector-up-char" class="selector">
     <span>Uppercase letters</span>
     </div>
-    
-    <button onclick="generatePassword()">Click me</button>
+    <div class="button-div">
+    <button onclick="generatePassword()">Generate Password</button>
+    </div>
+
     </div>
     
     <script src="app.js"></script>
