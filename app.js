@@ -5,10 +5,14 @@
     numIsWanted = document.getElementById("selector-num"),
     lowCharIsWanted = document.getElementById("selector-low-char"),
     upCharIsWanted = document.getElementById("selector-up-char")
+   
     sCharIsWanted.checked = true;
     numIsWanted.checked = true;
     lowCharIsWanted.checked = true;
     upCharIsWanted.checked = true;
+    
+    var passwordLengthInput = document.getElementById("password-length");
+    passwordLengthInput.value = "8";
     
 
 
@@ -17,21 +21,25 @@
     
     function generatePassword(){
         
+        if (passwordLengthInput.value > 3 && passwordLengthInput.value < 260){
 
+        
         var passwordChar = ""
-        
         passwordChar = addLettersToPassWordChar(passwordChar);
-        
         password = randomize(passwordChar);
-        
         reset_animation();
         passwordDisplay.innerHTML = password; 
         passwordDisplay.style.animation = "fadeIn 1s 1";
+
+        } else {
+            passwordDisplay.textContent = "Adjust Length";
+        }
+
         
     }
 
     function getLength() {
-        var passwordLengthInput = document.getElementById("password-length");
+        
         var passwordLength = passwordLengthInput.value;
         return passwordLength;
     }
