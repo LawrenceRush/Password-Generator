@@ -21,14 +21,17 @@
     
     function generatePassword(){
         
-        if (passwordLengthInput.value > 3 && passwordLengthInput.value < 260){
+        if (passwordLengthInput.value > 7 && passwordLengthInput.value < 129){
 
         
         var passwordChar = ""
         passwordChar = addLettersToPassWordChar(passwordChar);
         password = randomize(passwordChar);
         reset_animation();
-        passwordDisplay.innerHTML = password; 
+        
+        
+        passwordDisplay.textContent = password; 
+        
         passwordDisplay.style.animation = "fadeIn 1s 1";
 
         } else {
@@ -49,7 +52,7 @@
         var sChar = "!@#$%^&*-()+={[}]:;'/?.,<>",
             num = "1234567890",
             lowChar = "abcdefghijklmnopqrstuvwxyz",
-            upChar = "ABCDEFGHIJKLMNOPQQRSTUVWXYZ"
+            upChar = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
             
        
         if (sCharIsWanted.checked) {
@@ -76,17 +79,25 @@
    function randomize (passwordChar) {
        var result = '';
        var length = getLength();
+       console.log("get length result:   " + length)
        for (var i = 0; i < length; i++) {
            result += passwordChar.charAt(Math.floor(Math.random() * passwordChar.length));
        }
-       return result;
+       console.log("result of for length " + result.length)
+       return result;   
    }
 
 function reset_animation() {
     var el = document.getElementById('new-password');
     el.style.animation = 'none';
-    el.offsetHeight; /* trigger reflow */
+    el.offsetHeight; 
     el.style.animation = null;
+}
+
+function copy() {
+   
+    var text = document.getElementsByClassName('new-password');
+    text[0].select();
 }
 
   

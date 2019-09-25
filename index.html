@@ -7,14 +7,16 @@
     <title>Password Generator</title>
     <link href="https://fonts.googleapis.com/css?family=Electrolize|Orbitron&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    
 </head>
 <body>
     <h1>Password Generator</h1>
+    
     <h2 id = "new-password"></h2>
-
+         
     <div class = "center">
     <div class="selector-div" id = "number-selector">
-    <input  type="number" id = "password-length" placeholder = "#" min = "3" max = "250">
+    <input  type="number" id = "password-length" placeholder = "#" min = "8" max = "128">
     <span>Length</span>
     </div>
     <div class="selector-div">
@@ -37,11 +39,16 @@
     <span>Uppercase letters</span>
     </div>
     <div class="button-div">
-    <button onclick="generatePassword()">Generate Password</button>
+    <button class ="button-generate" onclick="generatePassword()">Generate Password</button>
+    </div>
+
+    <div id="copy-div">
+        <button id = "copy-button" onclick="copy()"><i class="far fa-clipboard"></i></button>
     </div>
 
     </div>
     
+    <script src="https://kit.fontawesome.com/c684d8d54f.js" crossorigin="anonymous"></script>
     <script src="app.js"></script>
 </body>
 </html>
