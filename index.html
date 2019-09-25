@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Password Generator</title>
+    <link href="https://fonts.googleapis.com/css?family=Electrolize|Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <h1>Password Generator</h1>
+    
+    <h2 id = "new-password"></h2>
+         
+    <div class = "center">
+    <div class="selector-div" id = "number-selector">
+    <input  type="number" id = "password-length" placeholder = "#" min = "8" max = "128">
+    <span>Length</span>
+    </div>
+    <div class="selector-div">
+    <input type="checkbox" id="selector-s-char" class="selector">
+    <span>Special Characters</span>
+    </div>
+    
+    <div class="selector-div">
+    <input type="checkbox" id="selector-num" class="selector">
+    <span>Numbers</span>
+    </div>
+    
+    <div class="selector-div">
+    <input type="checkbox" id="selector-low-char" class="selector">
+    <span>Lowercase letters</span>
+    </div>
+    
+    <div class="selector-div">
+    <input type="checkbox" id="selector-up-char" class="selector">
+    <span>Uppercase letters</span>
+    </div>
+    <div class="button-div">
+    <button class ="button-generate" onclick="generatePassword()">Generate Password</button>
+    </div>
+
+    <div id="copy-div">
+        <button id = "copy-button" onclick="copy()"><i class="far fa-clipboard"></i></button>
+    </div>
+
+    </div>
+    
+    <script src="https://kit.fontawesome.com/c684d8d54f.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+    
+
